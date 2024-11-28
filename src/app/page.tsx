@@ -43,7 +43,7 @@ export default function Home() {
       <h1 className="text-3xl font-bold mb-6 text-center">Rick and Morty Characters</h1>
       <Search onSearch={handleSearch} />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-4">
-        {filteredCharacters.map((character: { id: Key | null | undefined; image: string; name: string; status: string; location: string; }) => (
+        {filteredCharacters.map((character: { id: number | null | undefined; image: string; name: string; status: string; location: string; }) => (
           <Card
             key={character.id}
             id={character.id as number}
